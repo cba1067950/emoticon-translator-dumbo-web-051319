@@ -16,13 +16,16 @@ require 'pry'
 def load_library(path)
   # code goes here
   data = YAML.load_file(path)
+  newHash = {"get_meaning" => {}, "get_emoticon" => {}}
   
-  YAML.dump("foo")
-    { :a => 'b'}.to_yaml
-  #data.map do |english, japanese|
-  #  binding.pry
-  #end
   binding.pry
+  # data.each do |e_key, j_array|
+  #   newHash["get_meaning"] << j_array
+  #   newHash["get_emoticon"].merge(e_key: 1)
+  #   binding.pry
+  # end
+  #binding.pry
+  newHash
 end
 
 def get_japanese_emoticon
